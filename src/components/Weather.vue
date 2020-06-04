@@ -61,7 +61,7 @@ export default {
       let month = months[d.getMonth()];
       let year = d.getFullYear();
 
-      return `${day} ${date} ${month} ${year}`;
+      return `${day}, ${date} ${month}, ${year}`;
   }
 
   }
@@ -76,6 +76,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 500px;
 }
 
 body {
@@ -83,27 +84,26 @@ body {
 }
 
 #app {
-  background-color: pink;
-  /* background-image: url('.assets/cold-bg.jpg'); */
+  background-image: url("../assets/cold-bg.jpg");
   background-size: cover;
   background-position: bottom;
   transition: 0.4s;
 }
 
 #app.warm {
-  /* background-image: url('./assets/warm-bg.jpg'); */
-  background-color: blue;
+  background-image: url('../assets/warm-bg.jpg');
 }
 
 main {
   min-height: 100vh;
-  padding: 25px;
+  padding: 25px 0px 0px 0px;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.25),rgba(0,0,0,0.50));
 }
 
 .search-box {
   width: 100%;
   margin-bottom: 30px;
+  padding: 20px;
 }
 
 .search-box .search-bar {
@@ -157,6 +157,7 @@ main {
   color: #fff;
   font-size: 100px;
   font-weight: 900;
+  width: 50%;
 
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.25);
