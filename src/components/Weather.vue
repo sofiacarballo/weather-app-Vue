@@ -8,7 +8,7 @@
           class="search-bar" 
           placeholder="Search a city"
           v-model="query"
-          @keypress="fetchWeather"
+          @keyup.enter="fetchWeather"
           />
       </div>
 
@@ -39,14 +39,11 @@ export default {
     }
   },
   methods: {
-    fetchWeather (e) {
-      if (e.key == "Enter") {
-        fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`)
-          .then(response => {
-            return response.json();          
-          }).then(this.setResults);
-      }
-    },
+    async fetchWeather(){
+        let response = await fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`);
+        let json = await response.json();
+        this.weather = await json;
+      },
     setResults (results){
       this.weather = results;
     },
@@ -66,7 +63,6 @@ export default {
 
   }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
