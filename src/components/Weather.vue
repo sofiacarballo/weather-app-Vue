@@ -87,7 +87,7 @@ body {
 }
 
 #app.warm {
-  background-image: url('../assets/warm-bg.jpg');
+  background-image: url("../assets/warm-bg.jpg");
 }
 
 main {
