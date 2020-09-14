@@ -1,4 +1,5 @@
 # weather-app
+You can checkout the app [here](https://my-weather-app-vuejs.herokuapp.com/)
 
 ## Project setup
 ```
